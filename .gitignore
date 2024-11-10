@@ -1,0 +1,22 @@
+# Игнорируем файлы, сгенерированные Python
+*.pyc
+__pycache__
+.pytest_cache
+.mypy_cache
+*.egg-info
+*.egg
+*.zip
+*.tar.gz
+
+# Игнорируем журналы
+*.log
+*.txt
+
+# Игнорируем временные файлы
+*.tmp
+*.bak
+
+# Игнорируем файлы виртуальной среды
+venv/
+env/
+.venv/
