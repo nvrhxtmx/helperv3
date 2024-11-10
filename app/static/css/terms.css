@@ -1,0 +1,89 @@
+/* Стили для страницы пользовательского соглашения */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+  padding-top: 80px; /* Отступ для контента, чтобы шапка не перекрывала его */
+  background: url("/static/images/background.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.terms-container {
+  width: 80%; /* Ширина контейнера на больших экранах */
+  max-width: 800px; /* Максимальная ширина контейнера */
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  color: #fff;
+  margin: 0 auto; /* Центрирование контейнера */
+  position: relative;
+  top: 50px;
+  overflow: hidden;
+}
+
+/* Заголовок соглашения */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Основной текст */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Увеличиваем отступ между текстом и кнопкой */
+  text-align: justify; /* Равномерное распределение текста */
+}
+
+/* Кнопка продолжения регистрации */
+.continue-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%; /* Убедимся, что кнопка занимает всю ширину */
+}
+
+.continue-btn a {
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .terms-container {
+      width: 90%; /* Уменьшаем ширину контейнера на мобильных устройствах */
+      padding: 20px; /* Уменьшаем отступы на мобильных устройствах */
+  }
+
+  h2 {
+      font-size: 1.5rem; /* Уменьшаем размер заголовка на мобильных устройствах */
+  }
+
+  p {
+      font-size: 0.9rem; /* Уменьшаем размер текста на мобильных устройствах */
+  }
+
+  .continue-btn a { 
+      padding: 10px 20px; /* Уменьшаем отступы кнопки на мобильных устройствах */
+      font-size: 1rem; /* Уменьшаем размер текста кнопки на мобильных устройствах */
+  }
+}

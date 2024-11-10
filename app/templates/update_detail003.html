@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Classify 0.0.3{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/updates.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classify 0.0.3</title>
+{% endblock %}
+
+{% block content %}
+<!-- Контейнер для контента -->
+<div class="update-detail-container">
+    <!-- Изображение обновления -->
+    <div class="update-detail">
+        <img src="{{ url_for('static', filename='images/update3.png') }}" alt="Classify Update Image">
+    </div>
+
+    <!-- Блок информации -->
+    <div class="update-info-block">
+        <h2>Classify 0.0.3</h2>
+        <p>Дата выхода: xx.11.2024</p>
+    </div>
+
+    <!-- Описание обновления -->
+    <div class="update-description">
+        <h3><i>Cовсем скоро ты узнаешь о обо мне...</i></h3>
+            <a>
+                <i>Когда-нибудь настанет время и ты узнаешь что здесь должно быть </i>
+                <br><br>
+            </a>
+            <ul>
+                <i>Новый смысл,</i>
+                <i>Новые краски,</i>
+                <i>Новые возможности...</i>
+            </ul>
+    </div>
+</div>
+{% endblock %}

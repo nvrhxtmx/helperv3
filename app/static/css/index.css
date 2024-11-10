@@ -1,0 +1,80 @@
+/* Стили для главной страницы */
+/* Импорт стилей для шапки, подвала и кнопок */
+@import "header.css";
+@import "footer.css";
+@import "buttons.css";
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Отступ сверху, чтобы было место для шапки */
+}
+
+/* Заголовок контента */
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Основной текст */
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Увеличиваем отступ между текстом и кнопкой */
+}
+  
+  /* Кнопка продолжения */
+  .continue-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%; /* Убедимся, что кнопка занимает всю ширину */
+  }
+  
+  .continue-btn a {
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .continue-btn a:hover {
+    background-color: #444;
+    color: #fff;
+  }
+
+.btn {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+  }
+
+.btn:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+  }

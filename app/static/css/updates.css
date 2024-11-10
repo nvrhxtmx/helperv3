@@ -1,0 +1,140 @@
+/* Общий стиль для страницы */
+.content {
+    width: 100%;
+    max-width: 1400px; /* Увеличенная ширина контейнера */
+    margin: 0 auto;
+    padding: 30px;
+    color: #fff;
+}
+
+/* Стили для заголовков */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Стили для контейнера с обновлениями */
+.update-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Автоматическая адаптация под ширину */
+    gap: 30px;
+}
+
+/* Карточка обновления */
+.update-card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание для ссылки */
+    color: inherit; /* Наследуем цвет текста */
+}
+
+.update-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Изображение внутри карточки */
+.update-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9; /* Сохраняем соотношение сторон */
+}
+
+/* Информация о обновлении */
+.update-info {
+    padding: 20px;
+}
+
+.update-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.update-info p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.update-info .update-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+}
+
+.update-detail-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Отступ сверху, чтобы было место для шапки */
+}
+
+.update-detail img {
+    display: block ;
+    max-width: 80% ;
+    height: auto ;
+    margin: 0 auto ;
+    border-radius: 10px ;
+}
+
+.update-info-block {
+    background-color: #1f1f1f,0.3 ;
+    padding: 10px ;
+    border-radius: 10px ;
+    text-align: center ;
+    color: #eaeaea ;
+}
+
+.update-description h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.update-description h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.update-description h3 {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.update-description a {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.update-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.update-description ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}

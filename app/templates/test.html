@@ -1,0 +1,28 @@
+<!-- test.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест CSRF</title>
+</head>
+<body>
+    <form method="POST">
+        {{ form.hidden_tag() }} <!-- CSRF-защита -->
+        {{ form.email.label }} {{ form.email() }}<br>
+        {{ form.password.label }} {{ form.password() }}<br>
+        <input type="submit" value="Отправить">
+    </form>
+
+    {% if form.errors %}
+        <ul>
+            {% for field, errors in form.errors.items() %}
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
+  
+  

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать профиль{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="edit-profile-container">
+    <h2>Редактировать профиль</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+    <form method="POST" action="{{ url_for('main.edit_profile') }}">
+        {{ form.hidden_tag() }}
+        <div class="input-field">
+            {{ form.email.label}}
+            {{ form.email(placeholder="Email", required=True) }}
+        </div>
+        <div class="input-field">
+            {{ form.first_name.label}}
+            {{ form.first_name(placeholder="Имя", required=True) }}
+        </div>
+        <div class="input-field">
+            {{ form.last_name.label}}
+            {{ form.last_name(placeholder="Фамилия", required=True) }}
+        </div>
+        <div class="input-field">
+            {{ form.password.label }}
+            {{ form.password(placeholder="Пароль") }}
+        </div>
+        {{ form.submit(class="btn") }}
+    </form>
+</div>
+{% endblock %}

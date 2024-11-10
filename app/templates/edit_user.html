@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block content %}
+<div class="edit-user-container">
+    <h2>Edit User</h2>
+    <form method="POST" action="{{ url_for('main.edit_user', user_id=user.id) }}">
+        {{ form.hidden_tag() }}
+        <div class="input-field">
+            {{ form.email.label }}
+            {{ form.email(placeholder="Email", required=True) }}
+        </div>
+        <div class="input-field">
+            {{ form.first_name.label }}
+            {{ form.first_name(placeholder="First Name", required=True) }}
+        </div>
+        <div class="input-field">
+            {{ form.last_name.label }}
+            {{ form.last_name(placeholder="Last Name", required=True) }}
+        </div>
+        <div class="input-field">
+            {{ form.password.label }}
+            {{ form.password(placeholder="Password") }}
+        </div>
+        <div class="input-field">
+            {{ form.confirm_password.label }}
+            {{ form.confirm_password(placeholder="Confirm Password") }}
+        </div>
+        {{ form.submit() }}
+    </form>
+</div>
+{% endblock %}

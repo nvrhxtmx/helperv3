@@ -1,0 +1,64 @@
+/* about.css */
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Отступ сверху, чтобы было место для шапки */
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Абзацы */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Списки */
+ul {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Ссылки */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер для команды */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}

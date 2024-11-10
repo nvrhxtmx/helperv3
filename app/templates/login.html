@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <form method="POST" action="{{ url_for('auth.login') }}">
+        {{ form.hidden_tag() }} <!-- CSRF-защита -->
+        <h2>Вход</h2>
+        <div class="input-field">
+            {{ form.email.label }}
+            {{ form.email(placeholder="Введите ваш email", required=True) }}
+        </div>
+        <div class="input-field">
+            {{ form.password.label }}
+            {{ form.password(placeholder="Введите ваш пароль", required=True) }}
+        </div>
+        <div class="forget">
+            <label for="remember">
+                <input type="checkbox" name="remember" id="remember">
+                <p>Запомнить меня</p>
+            </label>
+            <a href="#">Забыли пароль?</a>
+        </div>
+        {{ form.submit(class="btn") }}
+        <div class="register">
+            <p>Нет аккаунта? <a href="{{ url_for('auth.register') }}">Зарегистрироваться</a></p>
+        </div>
+    </form>
+</div>
+{% endblock %}

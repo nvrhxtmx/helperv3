@@ -1,0 +1,88 @@
+/* Общие стили */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+/* Импорт стилей для шапки, подвала и кнопок */
+@import "header.css";
+@import "footer.css";
+@import "buttons.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+  padding-top: 80px; /* Отступ для контента, чтобы шапка не перекрывала его */
+  background: url("/static/images/background.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  color: #fff;
+}
+
+.terms-container {
+  width: 80%; /* Ширина контейнера на больших экранах */
+  max-width: 800px; /* Максимальная ширина контейнера */
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  color: #fff;
+  margin: 0 auto; /* Центрирование контейнера */
+  position: relative;
+  top: 50px;
+  overflow: hidden;
+}
+
+/* Стили для контента */
+.content {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Отступ сверху, чтобы было место для шапки */
+}
+
+/* Заголовок контента */
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Основной текст */
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Увеличиваем отступ между текстом и кнопкой */
+}
